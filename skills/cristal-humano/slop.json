@@ -1,0 +1,1733 @@
+{
+ "version": "1.0-cristal",
+ "nota": "Léxico de cristal-humano. Lo usan humanize.py y detect.py. Las familias 'regional' y 'voseo' son propias de esta versión: pasan regionalismos ajenos y tuteo al habla de Río Cuarto. Editalo cuando quieras: si Joaco usa una palabra que esto borra, sacala de acá.",
+ "invisible": [
+  {
+   "cp": "U+200B",
+   "name": "ZERO WIDTH SPACE",
+   "action": "delete"
+  },
+  {
+   "cp": "U+200C",
+   "name": "ZERO WIDTH NON-JOINER",
+   "action": "delete"
+  },
+  {
+   "cp": "U+200D",
+   "name": "ZERO WIDTH JOINER",
+   "action": "delete"
+  },
+  {
+   "cp": "U+2060",
+   "name": "WORD JOINER",
+   "action": "delete"
+  },
+  {
+   "cp": "U+FEFF",
+   "name": "BYTE ORDER MARK",
+   "action": "delete"
+  },
+  {
+   "cp": "U+00AD",
+   "name": "SOFT HYPHEN",
+   "action": "delete"
+  },
+  {
+   "cp": "U+180E",
+   "name": "MONGOLIAN VOWEL SEPARATOR",
+   "action": "delete"
+  },
+  {
+   "cp": "U+2061",
+   "name": "FUNCTION APPLICATION",
+   "action": "delete"
+  },
+  {
+   "cp": "U+2062",
+   "name": "INVISIBLE TIMES",
+   "action": "delete"
+  },
+  {
+   "cp": "U+2063",
+   "name": "INVISIBLE SEPARATOR",
+   "action": "delete"
+  },
+  {
+   "cp": "U+2064",
+   "name": "INVISIBLE PLUS",
+   "action": "delete"
+  },
+  {
+   "cp": "U+E0000-U+E007F",
+   "name": "UNICODE TAG CHARACTERS",
+   "action": "delete"
+  },
+  {
+   "cp": "U+00A0",
+   "name": "NO-BREAK SPACE",
+   "action": "space"
+  },
+  {
+   "cp": "U+202F",
+   "name": "NARROW NO-BREAK SPACE",
+   "action": "space"
+  },
+  {
+   "cp": "U+2007",
+   "name": "FIGURE SPACE",
+   "action": "space"
+  },
+  {
+   "cp": "U+2009",
+   "name": "THIN SPACE",
+   "action": "space"
+  },
+  {
+   "cp": "U+200A",
+   "name": "HAIR SPACE",
+   "action": "space"
+  },
+  {
+   "cp": "U+3000",
+   "name": "IDEOGRAPHIC SPACE",
+   "action": "space"
+  }
+ ],
+ "typographic": [
+  {
+   "from": "—",
+   "name": "RAYA (EM DASH)",
+   "to": ", "
+  },
+  {
+   "from": "–",
+   "name": "GUION MEDIO (EN DASH)",
+   "to": "-"
+  },
+  {
+   "from": "‘",
+   "name": "COMILLA SIMPLE CURVA IZQ.",
+   "to": "'"
+  },
+  {
+   "from": "’",
+   "name": "COMILLA SIMPLE CURVA DER.",
+   "to": "'"
+  },
+  {
+   "from": "“",
+   "name": "COMILLA DOBLE CURVA IZQ.",
+   "to": "\""
+  },
+  {
+   "from": "”",
+   "name": "COMILLA DOBLE CURVA DER.",
+   "to": "\""
+  },
+  {
+   "from": "«",
+   "name": "COMILLA ANGULAR IZQ.",
+   "to": "\""
+  },
+  {
+   "from": "»",
+   "name": "COMILLA ANGULAR DER.",
+   "to": "\""
+  },
+  {
+   "from": "…",
+   "name": "PUNTOS SUSPENSIVOS (UN CARÁCTER)",
+   "to": "..."
+  },
+  {
+   "from": "′",
+   "name": "PRIMA",
+   "to": "'"
+  },
+  {
+   "from": "·",
+   "name": "PUNTO MEDIO",
+   "to": "-"
+  },
+  {
+   "from": "•",
+   "name": "VIÑETA",
+   "to": "-"
+  },
+  {
+   "from": "→",
+   "name": "FLECHA",
+   "to": "->"
+  }
+ ],
+ "words": [
+  {
+   "find": "potenciar",
+   "replace": "mejorar",
+   "family": "verbos"
+  },
+  {
+   "find": "potenciá",
+   "replace": "mejorá",
+   "family": "verbos"
+  },
+  {
+   "find": "potenciando",
+   "replace": "mejorando",
+   "family": "verbos"
+  },
+  {
+   "find": "potenciamos",
+   "replace": "mejoramos",
+   "family": "verbos"
+  },
+  {
+   "find": "optimizar",
+   "replace": "mejorar",
+   "family": "verbos"
+  },
+  {
+   "find": "optimizá",
+   "replace": "mejorá",
+   "family": "verbos"
+  },
+  {
+   "find": "optimizando",
+   "replace": "mejorando",
+   "family": "verbos"
+  },
+  {
+   "find": "maximizar",
+   "replace": "aprovechar",
+   "family": "verbos"
+  },
+  {
+   "find": "maximizá",
+   "replace": "aprovechá",
+   "family": "verbos"
+  },
+  {
+   "find": "brindar",
+   "replace": "dar",
+   "family": "verbos"
+  },
+  {
+   "find": "brindamos",
+   "replace": "damos",
+   "family": "verbos"
+  },
+  {
+   "find": "brindarte",
+   "replace": "darte",
+   "family": "verbos"
+  },
+  {
+   "find": "brindarles",
+   "replace": "darles",
+   "family": "verbos"
+  },
+  {
+   "find": "transformar",
+   "replace": "cambiar",
+   "family": "verbos"
+  },
+  {
+   "find": "transformá",
+   "replace": "cambiá",
+   "family": "verbos"
+  },
+  {
+   "find": "sumergite",
+   "replace": "metete",
+   "family": "verbos"
+  },
+  {
+   "find": "sumérgete",
+   "replace": "metete",
+   "family": "verbos"
+  },
+  {
+   "find": "adentrarnos",
+   "replace": "meternos",
+   "family": "verbos"
+  },
+  {
+   "find": "ahondar",
+   "replace": "meterse",
+   "family": "verbos"
+  },
+  {
+   "find": "revolucionar",
+   "replace": "cambiar",
+   "family": "verbos"
+  },
+  {
+   "find": "garantizamos",
+   "replace": "aseguramos",
+   "family": "verbos"
+  },
+  {
+   "find": "innovador",
+   "replace": "nuevo",
+   "family": "adjetivos"
+  },
+  {
+   "find": "innovadora",
+   "replace": "nueva",
+   "family": "adjetivos"
+  },
+  {
+   "find": "innovadores",
+   "replace": "nuevos",
+   "family": "adjetivos"
+  },
+  {
+   "find": "innovadoras",
+   "replace": "nuevas",
+   "family": "adjetivos"
+  },
+  {
+   "find": "revolucionario",
+   "replace": "",
+   "family": "adjetivos"
+  },
+  {
+   "find": "revolucionaria",
+   "replace": "",
+   "family": "adjetivos"
+  },
+  {
+   "find": "revolucionarios",
+   "replace": "",
+   "family": "adjetivos"
+  },
+  {
+   "find": "excepcional",
+   "replace": "muy bueno",
+   "family": "adjetivos"
+  },
+  {
+   "find": "excepcionales",
+   "replace": "muy buenos",
+   "family": "adjetivos"
+  },
+  {
+   "find": "inigualable",
+   "replace": "",
+   "family": "adjetivos"
+  },
+  {
+   "find": "inigualables",
+   "replace": "",
+   "family": "adjetivos"
+  },
+  {
+   "find": "inmejorable",
+   "replace": "muy bueno",
+   "family": "adjetivos"
+  },
+  {
+   "find": "inmejorables",
+   "replace": "muy buenos",
+   "family": "adjetivos"
+  },
+  {
+   "find": "robusto",
+   "replace": "fuerte",
+   "family": "adjetivos"
+  },
+  {
+   "find": "robusta",
+   "replace": "fuerte",
+   "family": "adjetivos"
+  },
+  {
+   "find": "crucial",
+   "replace": "clave",
+   "family": "adjetivos"
+  },
+  {
+   "find": "exhaustivo",
+   "replace": "completo",
+   "family": "adjetivos"
+  },
+  {
+   "find": "exhaustiva",
+   "replace": "completa",
+   "family": "adjetivos"
+  },
+  {
+   "find": "meticuloso",
+   "replace": "cuidadoso",
+   "family": "adjetivos"
+  },
+  {
+   "find": "meticulosa",
+   "replace": "cuidadosa",
+   "family": "adjetivos"
+  },
+  {
+   "find": "holístico",
+   "replace": "completo",
+   "family": "adjetivos"
+  },
+  {
+   "find": "holística",
+   "replace": "completa",
+   "family": "adjetivos"
+  },
+  {
+   "find": "disruptivo",
+   "replace": "nuevo",
+   "family": "adjetivos"
+  },
+  {
+   "find": "disruptiva",
+   "replace": "nueva",
+   "family": "adjetivos"
+  },
+  {
+   "find": "sinérgico",
+   "replace": "",
+   "family": "adjetivos"
+  },
+  {
+   "find": "deslumbrante",
+   "replace": "",
+   "family": "adjetivos"
+  },
+  {
+   "find": "deslumbrantes",
+   "replace": "",
+   "family": "adjetivos"
+  },
+  {
+   "find": "cautivador",
+   "replace": "rico",
+   "family": "adjetivos"
+  },
+  {
+   "find": "cautivadora",
+   "replace": "rica",
+   "family": "adjetivos"
+  },
+  {
+   "find": "envolvente",
+   "replace": "",
+   "family": "adjetivos"
+  },
+  {
+   "find": "vibrante",
+   "replace": "vivo",
+   "family": "adjetivos"
+  },
+  {
+   "find": "vibrantes",
+   "replace": "vivos",
+   "family": "adjetivos"
+  },
+  {
+   "find": "óptimos",
+   "replace": "buenos",
+   "family": "adjetivos"
+  },
+  {
+   "find": "óptimas",
+   "replace": "buenas",
+   "family": "adjetivos"
+  },
+  {
+   "find": "sinergia",
+   "replace": "trabajo en equipo",
+   "family": "sustantivos"
+  },
+  {
+   "find": "sinergias",
+   "replace": "trabajo en equipo",
+   "family": "sustantivos"
+  },
+  {
+   "find": "paradigma",
+   "replace": "forma",
+   "family": "sustantivos"
+  },
+  {
+   "find": "ecosistema",
+   "replace": "sistema",
+   "family": "sustantivos"
+  },
+  {
+   "find": "asimismo",
+   "replace": "también",
+   "family": "conectores"
+  },
+  {
+   "find": "piscina",
+   "replace": "pileta",
+   "family": "regional"
+  },
+  {
+   "find": "piscinas",
+   "replace": "piletas",
+   "family": "regional"
+  },
+  {
+   "find": "alberca",
+   "replace": "pileta",
+   "family": "regional"
+  },
+  {
+   "find": "albercas",
+   "replace": "piletas",
+   "family": "regional"
+  },
+  {
+   "find": "lejía",
+   "replace": "lavandina",
+   "family": "regional"
+  },
+  {
+   "find": "fregona",
+   "replace": "lampazo",
+   "family": "regional"
+  },
+  {
+   "find": "trapeador",
+   "replace": "trapo de piso",
+   "family": "regional"
+  },
+  {
+   "find": "trapear",
+   "replace": "pasar el trapo",
+   "family": "regional"
+  },
+  {
+   "find": "cubeta",
+   "replace": "balde",
+   "family": "regional"
+  },
+  {
+   "find": "cubetas",
+   "replace": "baldes",
+   "family": "regional"
+  },
+  {
+   "find": "lavaloza",
+   "replace": "detergente",
+   "family": "regional"
+  },
+  {
+   "find": "lavatrastes",
+   "replace": "detergente",
+   "family": "regional"
+  },
+  {
+   "find": "trastes",
+   "replace": "platos",
+   "family": "regional"
+  },
+  {
+   "find": "móvil",
+   "replace": "celular",
+   "family": "regional"
+  },
+  {
+   "find": "ordenador",
+   "replace": "computadora",
+   "family": "regional"
+  },
+  {
+   "find": "coger",
+   "replace": "agarrar",
+   "family": "regional"
+  },
+  {
+   "find": "cógelo",
+   "replace": "agarralo",
+   "family": "regional"
+  },
+  {
+   "find": "cógela",
+   "replace": "agarrala",
+   "family": "regional"
+  },
+  {
+   "find": "ahorita",
+   "replace": "ahora",
+   "family": "regional"
+  },
+  {
+   "find": "guay",
+   "replace": "buenísimo",
+   "family": "regional"
+  },
+  {
+   "find": "chévere",
+   "replace": "buenísimo",
+   "family": "regional"
+  },
+  {
+   "find": "platicar",
+   "replace": "charlar",
+   "family": "regional"
+  },
+  {
+   "find": "aquí",
+   "replace": "acá",
+   "family": "regional"
+  },
+  {
+   "find": "zumo",
+   "replace": "jugo",
+   "family": "regional"
+  },
+  {
+   "find": "nevera",
+   "replace": "heladera",
+   "family": "regional"
+  },
+  {
+   "find": "refrigerador",
+   "replace": "heladera",
+   "family": "regional"
+  },
+  {
+   "find": "estropajo",
+   "replace": "esponja",
+   "family": "regional"
+  },
+  {
+   "find": "bayeta",
+   "replace": "rejilla",
+   "family": "regional"
+  },
+  {
+   "find": "desatascador",
+   "replace": "destapador",
+   "family": "regional"
+  },
+  {
+   "find": "tú",
+   "replace": "vos",
+   "family": "voseo"
+  },
+  {
+   "find": "puedes",
+   "replace": "podés",
+   "family": "voseo"
+  },
+  {
+   "find": "tienes",
+   "replace": "tenés",
+   "family": "voseo"
+  },
+  {
+   "find": "quieres",
+   "replace": "querés",
+   "family": "voseo"
+  },
+  {
+   "find": "sabes",
+   "replace": "sabés",
+   "family": "voseo"
+  },
+  {
+   "find": "eres",
+   "replace": "sos",
+   "family": "voseo"
+  },
+  {
+   "find": "necesitas",
+   "replace": "necesitás",
+   "family": "voseo"
+  },
+  {
+   "find": "debes",
+   "replace": "debés",
+   "family": "voseo"
+  },
+  {
+   "find": "haces",
+   "replace": "hacés",
+   "family": "voseo"
+  },
+  {
+   "find": "dices",
+   "replace": "decís",
+   "family": "voseo"
+  },
+  {
+   "find": "vienes",
+   "replace": "venís",
+   "family": "voseo"
+  },
+  {
+   "find": "piensas",
+   "replace": "pensás",
+   "family": "voseo"
+  },
+  {
+   "find": "sientes",
+   "replace": "sentís",
+   "family": "voseo"
+  },
+  {
+   "find": "crees",
+   "replace": "creés",
+   "family": "voseo"
+  },
+  {
+   "find": "buscas",
+   "replace": "buscás",
+   "family": "voseo"
+  },
+  {
+   "find": "usas",
+   "replace": "usás",
+   "family": "voseo"
+  },
+  {
+   "find": "gastas",
+   "replace": "gastás",
+   "family": "voseo"
+  },
+  {
+   "find": "ahorras",
+   "replace": "ahorrás",
+   "family": "voseo"
+  },
+  {
+   "find": "encuentras",
+   "replace": "encontrás",
+   "family": "voseo"
+  },
+  {
+   "find": "prefieres",
+   "replace": "preferís",
+   "family": "voseo"
+  },
+  {
+   "find": "consigues",
+   "replace": "conseguís",
+   "family": "voseo"
+  },
+  {
+   "find": "entiendes",
+   "replace": "entendés",
+   "family": "voseo"
+  },
+  {
+   "find": "contigo",
+   "replace": "con vos",
+   "family": "voseo"
+  },
+  {
+   "find": "escríbenos",
+   "replace": "escribinos",
+   "family": "voseo"
+  },
+  {
+   "find": "síguenos",
+   "replace": "seguinos",
+   "family": "voseo"
+  },
+  {
+   "find": "llámanos",
+   "replace": "llamanos",
+   "family": "voseo"
+  },
+  {
+   "find": "contáctanos",
+   "replace": "contactanos",
+   "family": "voseo"
+  },
+  {
+   "find": "cuéntanos",
+   "replace": "contanos",
+   "family": "voseo"
+  },
+  {
+   "find": "visítanos",
+   "replace": "visitanos",
+   "family": "voseo"
+  },
+  {
+   "find": "pídelo",
+   "replace": "pedilo",
+   "family": "voseo"
+  },
+  {
+   "find": "pídela",
+   "replace": "pedila",
+   "family": "voseo"
+  },
+  {
+   "find": "pídenos",
+   "replace": "pedinos",
+   "family": "voseo"
+  },
+  {
+   "find": "aprovéchalo",
+   "replace": "aprovechalo",
+   "family": "voseo"
+  },
+  {
+   "find": "aprovéchala",
+   "replace": "aprovechala",
+   "family": "voseo"
+  },
+  {
+   "find": "consúltanos",
+   "replace": "consultanos",
+   "family": "voseo"
+  },
+  {
+   "find": "mándanos",
+   "replace": "mandanos",
+   "family": "voseo"
+  },
+  {
+   "find": "déjanos",
+   "replace": "dejanos",
+   "family": "voseo"
+  },
+  {
+   "find": "pregúntanos",
+   "replace": "preguntanos",
+   "family": "voseo"
+  },
+  {
+   "find": "únete",
+   "replace": "sumate",
+   "family": "voseo"
+  },
+  {
+   "find": "apúrate",
+   "replace": "apurate",
+   "family": "voseo"
+  },
+  {
+   "find": "guárdalo",
+   "replace": "guardalo",
+   "family": "voseo"
+  },
+  {
+   "find": "guárdate",
+   "replace": "guardate",
+   "family": "voseo"
+  },
+  {
+   "find": "compártelo",
+   "replace": "compartilo",
+   "family": "voseo"
+  },
+  {
+   "find": "anímate",
+   "replace": "animate",
+   "family": "voseo"
+  },
+  {
+   "find": "olvídate",
+   "replace": "olvidate",
+   "family": "voseo"
+  },
+  {
+   "find": "llévate",
+   "replace": "llevate",
+   "family": "voseo"
+  },
+  {
+   "find": "llévalo",
+   "replace": "llevalo",
+   "family": "voseo"
+  },
+  {
+   "find": "pruébalo",
+   "replace": "probalo",
+   "family": "voseo"
+  },
+  {
+   "find": "descúbrelo",
+   "replace": "conocelo",
+   "family": "voseo"
+  },
+  {
+   "find": "regálate",
+   "replace": "regalate",
+   "family": "voseo"
+  },
+  {
+   "find": "suscríbete",
+   "replace": "suscribite",
+   "family": "voseo"
+  },
+  {
+   "find": "sígueme",
+   "replace": "seguime",
+   "family": "voseo"
+  },
+  {
+   "find": "escríbeme",
+   "replace": "escribime",
+   "family": "voseo"
+  },
+  {
+   "find": "cuéntame",
+   "replace": "contame",
+   "family": "voseo"
+  },
+  {
+   "find": "asegúrate",
+   "replace": "asegurate",
+   "family": "voseo"
+  },
+  {
+   "find": "acuérdate",
+   "replace": "acordate",
+   "family": "voseo"
+  }
+ ],
+ "phrases": [
+  {
+   "find": "eleva tu",
+   "replace": "mejorá tu",
+   "family": "verbos"
+  },
+  {
+   "find": "elevá tu",
+   "replace": "mejorá tu",
+   "family": "verbos"
+  },
+  {
+   "find": "impulsar tu negocio",
+   "replace": "hacer crecer tu negocio",
+   "family": "verbos"
+  },
+  {
+   "find": "impulsá tu negocio",
+   "replace": "hacé crecer tu negocio",
+   "family": "verbos"
+  },
+  {
+   "find": "de vanguardia",
+   "replace": "",
+   "family": "adjetivos"
+  },
+  {
+   "find": "de última generación",
+   "replace": "nuevo",
+   "family": "adjetivos"
+  },
+  {
+   "find": "calidad premium",
+   "replace": "buena calidad",
+   "family": "adjetivos"
+  },
+  {
+   "find": "la más alta calidad",
+   "replace": "buena calidad",
+   "family": "adjetivos"
+  },
+  {
+   "find": "la mejor calidad",
+   "replace": "buena calidad",
+   "family": "adjetivos"
+  },
+  {
+   "find": "máxima calidad",
+   "replace": "buena calidad",
+   "family": "adjetivos"
+  },
+  {
+   "find": "excelente calidad",
+   "replace": "buena calidad",
+   "family": "adjetivos"
+  },
+  {
+   "find": "resultados increíbles",
+   "replace": "buenos resultados",
+   "family": "adjetivos"
+  },
+  {
+   "find": "resultados óptimos",
+   "replace": "buenos resultados",
+   "family": "adjetivos"
+  },
+  {
+   "find": "resultados sorprendentes",
+   "replace": "buenos resultados",
+   "family": "adjetivos"
+  },
+  {
+   "find": "resultados excepcionales",
+   "replace": "buenos resultados",
+   "family": "adjetivos"
+  },
+  {
+   "find": "experiencia única",
+   "replace": "",
+   "family": "adjetivos"
+  },
+  {
+   "find": "una experiencia única",
+   "replace": "",
+   "family": "adjetivos"
+  },
+  {
+   "find": "experiencia inolvidable",
+   "replace": "",
+   "family": "adjetivos"
+  },
+  {
+   "find": "oportunidad única",
+   "replace": "oportunidad",
+   "family": "adjetivos"
+  },
+  {
+   "find": "solución integral",
+   "replace": "solución",
+   "family": "adjetivos"
+  },
+  {
+   "find": "soluciones integrales",
+   "replace": "soluciones",
+   "family": "adjetivos"
+  },
+  {
+   "find": "calidad y confianza",
+   "replace": "",
+   "family": "adjetivos"
+  },
+  {
+   "find": "calidad y compromiso",
+   "replace": "",
+   "family": "adjetivos"
+  },
+  {
+   "find": "compromiso con la excelencia",
+   "replace": "",
+   "family": "adjetivos"
+  },
+  {
+   "find": "comprometidos con la excelencia",
+   "replace": "",
+   "family": "adjetivos"
+  },
+  {
+   "find": "brillo deslumbrante",
+   "replace": "brillo",
+   "family": "adjetivos"
+  },
+  {
+   "find": "aroma cautivador",
+   "replace": "buen olor",
+   "family": "adjetivos"
+  },
+  {
+   "find": "aroma inigualable",
+   "replace": "buen olor",
+   "family": "adjetivos"
+  },
+  {
+   "find": "fragancia envolvente",
+   "replace": "buen perfume",
+   "family": "adjetivos"
+  },
+  {
+   "find": "frescura duradera",
+   "replace": "olor que dura",
+   "family": "adjetivos"
+  },
+  {
+   "find": "hogar reluciente",
+   "replace": "casa limpia",
+   "family": "adjetivos"
+  },
+  {
+   "find": "tus seres queridos",
+   "replace": "tu familia",
+   "family": "adjetivos"
+  },
+  {
+   "find": "tu hogar",
+   "replace": "tu casa",
+   "family": "adjetivos"
+  },
+  {
+   "find": "de tu hogar",
+   "replace": "de tu casa",
+   "family": "adjetivos"
+  },
+  {
+   "find": "propuesta de valor",
+   "replace": "lo que ofrecemos",
+   "family": "sustantivos"
+  },
+  {
+   "find": "una amplia gama de",
+   "replace": "muchos",
+   "family": "sustantivos"
+  },
+  {
+   "find": "amplia gama de",
+   "replace": "muchos",
+   "family": "sustantivos"
+  },
+  {
+   "find": "un sinfín de",
+   "replace": "muchos",
+   "family": "sustantivos"
+  },
+  {
+   "find": "una amplia variedad de",
+   "replace": "muchos",
+   "family": "sustantivos"
+  },
+  {
+   "find": "el mundo de la limpieza",
+   "replace": "la limpieza",
+   "family": "sustantivos"
+  },
+  {
+   "find": "el universo de",
+   "replace": "",
+   "family": "sustantivos"
+  },
+  {
+   "find": "por consiguiente",
+   "replace": "entonces",
+   "family": "conectores"
+  },
+  {
+   "find": "por ende",
+   "replace": "por eso",
+   "family": "conectores"
+  },
+  {
+   "find": "no obstante",
+   "replace": "pero",
+   "family": "conectores"
+  },
+  {
+   "find": "en definitiva",
+   "replace": "",
+   "family": "conectores"
+  },
+  {
+   "find": "cabe destacar que",
+   "replace": "",
+   "family": "conectores"
+  },
+  {
+   "find": "cabe mencionar que",
+   "replace": "",
+   "family": "conectores"
+  },
+  {
+   "find": "cabe resaltar que",
+   "replace": "",
+   "family": "conectores"
+  },
+  {
+   "find": "es importante destacar que",
+   "replace": "",
+   "family": "conectores"
+  },
+  {
+   "find": "es importante mencionar que",
+   "replace": "",
+   "family": "conectores"
+  },
+  {
+   "find": "es importante tener en cuenta que",
+   "replace": "",
+   "family": "conectores"
+  },
+  {
+   "find": "es importante recordar que",
+   "replace": "",
+   "family": "conectores"
+  },
+  {
+   "find": "vale la pena mencionar que",
+   "replace": "",
+   "family": "conectores"
+  },
+  {
+   "find": "vale la pena destacar que",
+   "replace": "",
+   "family": "conectores"
+  },
+  {
+   "find": "dicho esto",
+   "replace": "",
+   "family": "conectores"
+  },
+  {
+   "find": "en este sentido",
+   "replace": "",
+   "family": "conectores"
+  },
+  {
+   "find": "a su vez",
+   "replace": "también",
+   "family": "conectores"
+  },
+  {
+   "find": "de esta manera",
+   "replace": "así",
+   "family": "conectores"
+  },
+  {
+   "find": "de este modo",
+   "replace": "así",
+   "family": "conectores"
+  },
+  {
+   "find": "en primer lugar",
+   "replace": "primero",
+   "family": "conectores"
+  },
+  {
+   "find": "sin lugar a dudas",
+   "replace": "",
+   "family": "conectores"
+  },
+  {
+   "find": "sin duda alguna",
+   "replace": "",
+   "family": "conectores"
+  },
+  {
+   "find": "en otras palabras",
+   "replace": "o sea",
+   "family": "conectores"
+  },
+  {
+   "find": "en el mundo actual",
+   "replace": "hoy",
+   "family": "aperturas"
+  },
+  {
+   "find": "en el vertiginoso mundo de",
+   "replace": "en",
+   "family": "aperturas"
+  },
+  {
+   "find": "en el mundo de hoy",
+   "replace": "hoy",
+   "family": "aperturas"
+  },
+  {
+   "find": "en la era digital",
+   "replace": "hoy",
+   "family": "aperturas"
+  },
+  {
+   "find": "en un mundo cada vez más",
+   "replace": "en un mundo más",
+   "family": "aperturas"
+  },
+  {
+   "find": "hoy en día",
+   "replace": "hoy",
+   "family": "aperturas"
+  },
+  {
+   "find": "en la actualidad",
+   "replace": "hoy",
+   "family": "aperturas"
+  },
+  {
+   "find": "en el día de hoy",
+   "replace": "hoy",
+   "family": "aperturas"
+  },
+  {
+   "find": "en este artículo",
+   "replace": "",
+   "family": "aperturas"
+  },
+  {
+   "find": "en este post",
+   "replace": "",
+   "family": "aperturas"
+  },
+  {
+   "find": "en esta publicación",
+   "replace": "",
+   "family": "aperturas"
+  },
+  {
+   "find": "alguna vez te has preguntado",
+   "replace": "alguna vez te preguntaste",
+   "family": "aperturas"
+  },
+  {
+   "find": "no dudes en contactarnos",
+   "replace": "escribinos",
+   "family": "cierres"
+  },
+  {
+   "find": "no dudes en consultarnos",
+   "replace": "consultanos",
+   "family": "cierres"
+  },
+  {
+   "find": "no dudes en escribirnos",
+   "replace": "escribinos",
+   "family": "cierres"
+  },
+  {
+   "find": "no dudes en consultar",
+   "replace": "consultá",
+   "family": "cierres"
+  },
+  {
+   "find": "no te lo pierdas",
+   "replace": "",
+   "family": "cierres"
+  },
+  {
+   "find": "no te lo podés perder",
+   "replace": "",
+   "family": "cierres"
+  },
+  {
+   "find": "no te lo puedes perder",
+   "replace": "",
+   "family": "cierres"
+  },
+  {
+   "find": "esperamos que te sea útil",
+   "replace": "",
+   "family": "cierres"
+  },
+  {
+   "find": "esperamos que te haya servido",
+   "replace": "",
+   "family": "cierres"
+  },
+  {
+   "find": "estamos para ayudarte",
+   "replace": "",
+   "family": "cierres"
+  },
+  {
+   "find": "estamos para servirte",
+   "replace": "",
+   "family": "cierres"
+  },
+  {
+   "find": "qué esperás",
+   "replace": "",
+   "family": "cierres"
+  },
+  {
+   "find": "qué estás esperando",
+   "replace": "",
+   "family": "cierres"
+  },
+  {
+   "find": "te esperamos con los brazos abiertos",
+   "replace": "te esperamos",
+   "family": "cierres"
+  },
+  {
+   "find": "pará de scrollear",
+   "replace": "",
+   "family": "instagram"
+  },
+  {
+   "find": "no te olvides de seguirnos",
+   "replace": "",
+   "family": "instagram"
+  },
+  {
+   "find": "seguinos para más tips",
+   "replace": "",
+   "family": "instagram"
+  },
+  {
+   "find": "seguinos para más",
+   "replace": "",
+   "family": "instagram"
+  },
+  {
+   "find": "síguenos para más",
+   "replace": "",
+   "family": "instagram"
+  },
+  {
+   "find": "dale like",
+   "replace": "",
+   "family": "instagram"
+  },
+  {
+   "find": "dale me gusta",
+   "replace": "",
+   "family": "instagram"
+  },
+  {
+   "find": "en el video de hoy",
+   "replace": "",
+   "family": "instagram"
+  },
+  {
+   "find": "en el reel de hoy",
+   "replace": "",
+   "family": "instagram"
+  },
+  {
+   "find": "hoy les traigo",
+   "replace": "",
+   "family": "instagram"
+  },
+  {
+   "find": "hoy te traigo",
+   "replace": "",
+   "family": "instagram"
+  },
+  {
+   "find": "lleva tu limpieza al siguiente nivel",
+   "replace": "",
+   "family": "instagram"
+  },
+  {
+   "find": "llevá tu limpieza al siguiente nivel",
+   "replace": "",
+   "family": "instagram"
+  },
+  {
+   "find": "al siguiente nivel",
+   "replace": "",
+   "family": "instagram"
+  },
+  {
+   "find": "al próximo nivel",
+   "replace": "",
+   "family": "instagram"
+  },
+  {
+   "find": "jabón para trastes",
+   "replace": "detergente",
+   "family": "regional"
+  },
+  {
+   "find": "jabón de trastes",
+   "replace": "detergente",
+   "family": "regional"
+  },
+  {
+   "find": "papel de cocina",
+   "replace": "rollo de cocina",
+   "family": "regional"
+  },
+  {
+   "find": "detergente para ropa",
+   "replace": "jabón para la ropa",
+   "family": "regional"
+  },
+  {
+   "find": "date prisa",
+   "replace": "apurate",
+   "family": "regional"
+  },
+  {
+   "find": "para ti",
+   "replace": "para vos",
+   "family": "voseo"
+  },
+  {
+   "find": "a ti",
+   "replace": "a vos",
+   "family": "voseo"
+  },
+  {
+   "find": "de ti",
+   "replace": "de vos",
+   "family": "voseo"
+  },
+  {
+   "find": "en ti",
+   "replace": "en vos",
+   "family": "voseo"
+  }
+ ],
+ "imperativos_tuteo": [
+  {
+   "find": "Descubre",
+   "replace": "Conocé",
+   "requiere": ""
+  },
+  {
+   "find": "Aprovecha",
+   "replace": "Aprovechá",
+   "requiere": ""
+  },
+  {
+   "find": "Llama",
+   "replace": "Llamá",
+   "requiere": "(?=\\s+(?:al|ahora|ya|hoy|y pedí|para)\\b)"
+  },
+  {
+   "find": "Escribe",
+   "replace": "Escribí",
+   "requiere": ""
+  },
+  {
+   "find": "Visita",
+   "replace": "Visitá",
+   "requiere": ""
+  },
+  {
+   "find": "Conoce",
+   "replace": "Conocé",
+   "requiere": "(?=\\s+(?:nuestr[oa]s?|el|la|los|las|tu|tus|este|esta|estos|estas|ahora|ya|hoy|más|acá|aquí|lo|un|una|todo|todos|antes|cuando|con|esto|gratis)\\b)"
+  },
+  {
+   "find": "Pide",
+   "replace": "Pedí",
+   "requiere": "(?=\\s+(?:nuestr[oa]s?|el|la|los|las|tu|tus|este|esta|estos|estas|ahora|ya|hoy|más|acá|aquí|lo|un|una|todo|todos|antes|cuando|con|esto|gratis)\\b)"
+  },
+  {
+   "find": "Elige",
+   "replace": "Elegí",
+   "requiere": "(?=\\s+(?:nuestr[oa]s?|el|la|los|las|tu|tus|este|esta|estos|estas|ahora|ya|hoy|más|acá|aquí|lo|un|una|todo|todos|antes|cuando|con|esto|gratis)\\b)"
+  },
+  {
+   "find": "Mira",
+   "replace": "Mirá",
+   "requiere": "(?=\\s+(?:nuestr[oa]s?|el|la|los|las|tu|tus|este|esta|estos|estas|ahora|ya|hoy|más|acá|aquí|lo|un|una|todo|todos|antes|cuando|con|esto|gratis|cómo|qué|lo que)\\b)"
+  },
+  {
+   "find": "Sigue",
+   "replace": "Seguí",
+   "requiere": "(?=\\s+(?:nuestr[oa]s?|a\\s+@|en\\s+(?:instagram|redes|facebook)|estos|estas|los|las|esta|este)\\b)"
+  },
+  {
+   "find": "Comenta",
+   "replace": "Comentá",
+   "requiere": ""
+  },
+  {
+   "find": "Guarda",
+   "replace": "Guardá",
+   "requiere": ""
+  },
+  {
+   "find": "Comparte",
+   "replace": "Compartí",
+   "requiere": ""
+  },
+  {
+   "find": "Encuentra",
+   "replace": "Encontrá",
+   "requiere": ""
+  },
+  {
+   "find": "Disfruta",
+   "replace": "Disfrutá",
+   "requiere": ""
+  },
+  {
+   "find": "Haz",
+   "replace": "Hacé",
+   "requiere": ""
+  },
+  {
+   "find": "Ven",
+   "replace": "Vení",
+   "requiere": "(?=\\s+(?:a|al)\\b)"
+  },
+  {
+   "find": "Pon",
+   "replace": "Poné",
+   "requiere": ""
+  },
+  {
+   "find": "Agrega",
+   "replace": "Agregá",
+   "requiere": ""
+  },
+  {
+   "find": "Añade",
+   "replace": "Agregá",
+   "requiere": ""
+  },
+  {
+   "find": "Recuerda",
+   "replace": "Acordate",
+   "requiere": ""
+  },
+  {
+   "find": "Evita",
+   "replace": "Evitá",
+   "requiere": ""
+  },
+  {
+   "find": "Compra",
+   "replace": "Comprá",
+   "requiere": "(?=\\s+(?:nuestr[oa]s?|el|la|los|las|tu|tus|este|esta|estos|estas|ahora|ya|hoy|más|acá|aquí|lo|un|una|todo|todos|antes|cuando|con|esto|gratis)\\b)"
+  },
+  {
+   "find": "Pregunta",
+   "replace": "Preguntá",
+   "requiere": "(?=\\s+(?:nuestr[oa]s?|el|la|los|las|tu|tus|este|esta|estos|estas|ahora|ya|hoy|más|acá|aquí|lo|un|una|todo|todos|antes|cuando|con|esto|gratis)\\b)"
+  },
+  {
+   "find": "Consulta",
+   "replace": "Consultá",
+   "requiere": "(?=\\s+(?:nuestr[oa]s?|el|la|los|las|tu|tus|este|esta|estos|estas|ahora|ya|hoy|más|acá|aquí|lo|un|una|todo|todos|antes|cuando|con|esto|gratis)\\b)"
+  },
+  {
+   "find": "Prueba",
+   "replace": "Probá",
+   "requiere": "(?=\\s+(?:nuestr[oa]s?|el|la|los|las|tu|tus|este|esta|estos|estas|ahora|ya|hoy|más|acá|aquí|lo|un|una|todo|todos|antes|cuando|con|esto|gratis)\\b)"
+  },
+  {
+   "find": "Usa",
+   "replace": "Usá",
+   "requiere": "(?=\\s+(?:nuestr[oa]s?|el|la|los|las|tu|tus|este|esta|estos|estas|ahora|ya|hoy|más|acá|aquí|lo|un|una|todo|todos|antes|cuando|con|esto|gratis)\\b)"
+  },
+  {
+   "find": "Ten",
+   "replace": "Tené",
+   "requiere": "(?=\\s+(?:nuestr[oa]s?|el|la|los|las|tu|tus|este|esta|estos|estas|ahora|ya|hoy|más|acá|aquí|lo|un|una|todo|todos|antes|cuando|con|esto|gratis)\\b)"
+  }
+ ],
+ "structures": [
+  {
+   "id": "no-solo",
+   "regex": "(?i)\\bno (?:es )?(?:solo|sólo|solamente) [^.!?\\n]{2,60}[,;.]\\s*(?:es|sino)\\b",
+   "name": "\"No es solo X, es Y\"",
+   "fix": "Decí la única cosa que querés decir. Borrá la mitad que prepara."
+  },
+  {
+   "id": "no-solo-sino",
+   "regex": "(?i)\\bno solo\\b[^.!?\\n]{2,80}\\bsino (?:también|que)\\b",
+   "name": "\"No solo X sino también Y\"",
+   "fix": "Partilo en dos oraciones o sacá la mitad más floja."
+  },
+  {
+   "id": "no-se-trata",
+   "regex": "(?i)\\bno se trata de [^.!?\\n]{2,60}[.,;]\\s*se trata de\\b",
+   "name": "\"No se trata de X. Se trata de Y.\"",
+   "fix": "Arrancá por Y. La vuelta es lo que delata."
+  },
+  {
+   "id": "pregunta-escenario",
+   "regex": "(?im)^\\s*¿(?:el resultado|lo mejor|la clave|el secreto|la diferencia|la respuesta|lo peor|el truco)\\?\\s*$",
+   "name": "Pregunta retórica de una línea (¿El resultado?)",
+   "fix": "Respondé en la misma oración en vez de armar un suspenso."
+  },
+  {
+   "id": "esto-aprendi",
+   "regex": "(?i)\\besto es lo que aprend(?:í|imos)\\b",
+   "name": "\"Esto es lo que aprendí\"",
+   "fix": "Decí lo aprendido. Saltate el anuncio."
+  },
+  {
+   "id": "triada",
+   "regex": "(?i)\\b\\w+, \\w+ y \\w+\\.",
+   "name": "Tríada (X, Y y Z.)",
+   "fix": "Dos cosas o cuatro. Tres es el ritmo por defecto de la IA."
+  },
+  {
+   "id": "emoji-cohete",
+   "regex": "[🚀🔥💡✨🎯💯🙌]",
+   "name": "Emoji cohete / fuego / lamparita / brillitos / diana / 100",
+   "fix": "Un emoji como máximo, y que no sea de estos."
+  },
+  {
+   "id": "muro-hashtags",
+   "regex": "(?:#\\w+[ \\t]*){6,}",
+   "name": "Muro de hashtags (6 o más)",
+   "fix": "Instagram toma hasta 5 desde dic-2025. Elegí 3 a 5 temáticos."
+  },
+  {
+   "id": "como-ia",
+   "regex": "(?i)\\bcomo (?:una )?(?:ia|inteligencia artificial|modelo de lenguaje)\\b",
+   "name": "La IA hablando de sí misma",
+   "fix": "Borrá la oración entera."
+  },
+  {
+   "id": "en-resumen",
+   "regex": "(?im)^\\s*(?:en resumen|en conclusión|para concluir|en síntesis)\\b",
+   "name": "Cierre de redacción escolar",
+   "fix": "Un post no lleva párrafo de conclusión."
+  },
+  {
+   "id": "cebo-final",
+   "regex": "(?i)¿(?:qué opinan|vos qué (?:pensás|opinás)|ustedes qué (?:piensan|opinan)|están de acuerdo|me equivoco|qué piensan)\\?\\s*$",
+   "name": "Pregunta cebo al final",
+   "fix": "Preguntá algo que solo vos podés preguntar, sobre lo puntual de arriba."
+  },
+  {
+   "id": "para-scroll",
+   "regex": "(?im)^\\s*[¡¿]?\\s*(?:par[aá] de scrollear|no scrollees|esper[aá],? no pases|no pases)\\b",
+   "name": "Arranque \"pará de scrollear\"",
+   "fix": "El freno tiene que ser la afirmación misma. Pedir atención delata que no te la ganaste."
+  },
+  {
+   "id": "preambulo",
+   "regex": "(?i)\\b(?:en (?:este|el) (?:video|reel|post)(?: de hoy)?|hoy (?:les|te) (?:traigo|voy a mostrar|voy a enseñar)|(?:les|te) voy a (?:mostrar|enseñar))\\b",
+   "name": "Preámbulo (\"en este video les voy a mostrar\")",
+   "fix": "Borralo y arrancá por el resultado. Los dos primeros segundos deciden todo."
+  },
+  {
+   "id": "emoji-vinetas",
+   "regex": "(?m)^\\s*[🌀-🫿✅➡⬅✔✨👉]\\s*\\S",
+   "name": "Lista con emojis de viñeta",
+   "fix": "Guion o salto de línea. Las viñetas con emoji son lo más de plantilla que hay en un caption."
+  },
+  {
+   "id": "mayusculas",
+   "regex": "\\b[A-ZÁÉÍÓÚÑ]{3,}\\b(?:\\s+\\b[A-ZÁÉÍÓÚÑ]{3,}\\b){2,}",
+   "name": "Tres o más palabras gritadas seguidas",
+   "fix": "Las mayúsculas son volumen, no resaltador. Una palabra como mucho."
+  },
+  {
+   "id": "cebo-seguir",
+   "regex": "(?i)\\b(?:seguinos para más|no te olvides de seguirnos|etiquetá a (?:alguien|un amigo|una amiga|tu)|dale (?:like|me gusta) si|compartí si|comentá si)\\b",
+   "name": "Cebo de seguir o etiquetar",
+   "fix": "Pedí la única acción que este post se ganó. El pedido genérico entrena a ignorar todos."
+  },
+  {
+   "id": "precio-privado",
+   "regex": "(?i)\\bprecio(?:s)? (?:por|al|en) (?:privado|dm|md|inbox|interno)\\b|\\bconsult(?:á|a|ar) (?:el )?precio por (?:privado|dm|md|interno)\\b",
+   "name": "\"Precio por privado\"",
+   "fix": "En Argentina espanta. Poné el precio de Odoo, o explicá en una línea por qué varía y mandá a WhatsApp."
+  },
+  {
+   "id": "gritos",
+   "regex": "!{2,}|¡[^!\\n]{1,60}!(?:\\s*¡[^!\\n]{1,60}!){2,}",
+   "name": "Exclamación en cada frase",
+   "fix": "Una exclamación por posteo alcanza. El resto, punto."
+  },
+  {
+   "id": "tuteo-ambiguo",
+   "regex": "(?m)(?:^|[.!?]\\s+)(?:Limpia|Elimina|Quita|Deja|Lava|Protege|Mezcla|Lleva|Cuida|Renueva|Transforma)\\s+(?:tu|tus)\\b",
+   "name": "Imperativo en tuteo (\"Lleva tu...\")",
+   "fix": "Pasalo a voseo: Llevá, Limpiá, Dejá, Cuidá..."
+  },
+  {
+   "id": "perfecto-tu",
+   "regex": "(?i)\\b(?:has|hayas) (?:\\w+(?:ado|ido|ito|uesto|echo))\\b",
+   "name": "Pretérito en tuteo (\"has visto\")",
+   "fix": "En rioplatense va el pasado simple: \"viste\", \"probaste\"."
+  },
+  {
+   "id": "vosotros",
+   "regex": "(?i)\\b(?:vosotros|vosotras|vuestr[oa]s?)\\b|\\b\\w+(?:áis|éis)\\b",
+   "name": "Vosotros (España)",
+   "fix": "Acá es ustedes."
+  },
+  {
+   "id": "garantia-vacia",
+   "regex": "(?i)\\b(?:satisfacción garantizada|calidad garantizada|garantía de calidad|100\\s?% garantizado)\\b",
+   "name": "Garantía vacía",
+   "fix": "Decí la garantía concreta si existe (te lo cambiamos, te devolvemos), o sacala."
+  }
+ ]
+}

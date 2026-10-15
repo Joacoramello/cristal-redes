@@ -1,0 +1,91 @@
+{
+  "version": "1.0-cristal",
+  "total": 100,
+  "nota": "Doce ítems para el perfil de un comercio local, no de un creador. Puntuá honesto: un puntaje generoso no le sirve a nadie, y la mayoría de los perfiles de comercio arrancan entre 30 y 50. El peso está puesto en lo que procesa en tres segundos alguien que llegó desde un reel o desde un anuncio: qué vende, dónde, cómo compro y si está vivo.",
+  "items": [
+    {
+      "id": "campo_nombre",
+      "nombre": "Campo nombre",
+      "puntos": 12,
+      "completo": "El nombre en negrita (30 caracteres, no el @usuario) dice la marca más lo que vende y dónde, con las palabras que la gente busca: 'Química Cristal | Limpieza Río Cuarto'. Instagram busca sobre este campo y casi todos los comercios lo gastan en el nombre solo.",
+      "falla_comun": "Solo 'Química Cristal', o el nombre con un emoji."
+    },
+    {
+      "id": "bio_linea_1",
+      "nombre": "Bio, primera línea",
+      "puntos": 12,
+      "completo": "Qué vendés, a quién y qué gana el que compra, en sus palabras. 'Fabricamos productos de limpieza en Río Cuarto. Te los llevamos a tu casa.' No un slogan, no una lista de rubros separados por barras.",
+      "falla_comun": "'Calidad y confianza desde siempre ✨' o 'Limpieza | Piletas | Bazar | Mayorista'."
+    },
+    {
+      "id": "bio_resto",
+      "nombre": "Bio, el resto",
+      "puntos": 8,
+      "completo": "El resto de los 150 caracteres lleva una prueba (más de 20 años, fabricación propia) y una condición concreta que hace comprar (envío gratis desde $X en Río Cuarto, mayorista, horario). Se lee como oraciones.",
+      "falla_comun": "Sopa de palabras clave, o espacio vacío."
+    },
+    {
+      "id": "botones_contacto",
+      "nombre": "Botones y categoría",
+      "puntos": 10,
+      "completo": "Cuenta profesional de empresa, categoría que coincide con lo que vende, botón de WhatsApp que abre el número correcto (el que atiende), dirección del local cargada para que aparezca 'Cómo llegar', y teléfono. Cada botón probado desde otro celular.",
+      "falla_comun": "Botón de WhatsApp al número viejo, o sin dirección, o cuenta personal sin estadísticas."
+    },
+    {
+      "id": "enlace",
+      "nombre": "Enlace",
+      "puntos": 6,
+      "completo": "Una puerta que coincide con lo que promete la bio: el WhatsApp que atiende con un mensaje pre-cargado, o la tienda. Hasta 5 enlaces se permiten; más de dos es un menú, y un menú convierte peor que una puerta.",
+      "falla_comun": "Un árbol de links con ocho opciones, o ningún link."
+    },
+    {
+      "id": "destacadas",
+      "nombre": "Historias destacadas",
+      "puntos": 8,
+      "completo": "Cuatro a seis, nombradas por las preguntas que hace un comprador: Promos, Envíos, Piletas, Mayoristas, Cómo llegar, Clientes. Portadas parejas. Nada de hace más de un año adelante. Los precios que muestran, vigentes.",
+      "falla_comun": "'Varios', 'Navidad 2023', o catorce destacadas sin orden. O una destacada de Promos con precios de hace seis meses."
+    },
+    {
+      "id": "fijados",
+      "nombre": "Los tres fijados",
+      "puntos": 10,
+      "completo": "Tres publicaciones fijadas arriba de la grilla, con tres trabajos distintos: la promo vigente (con precio), cómo comprar (WhatsApp, envío, zona, mínimo), y quiénes somos (el local, la fábrica, Joaco). No las tres con más vistas por casualidad.",
+      "falla_comun": "Nada fijado, entonces arriba está lo último que se subió, que es una moneda al aire."
+    },
+    {
+      "id": "grilla",
+      "nombre": "Grilla legible",
+      "puntos": 8,
+      "completo": "Las primeras nueve portadas se entienden en miniatura y dicen de qué es la cuenta sin tocar nada. Portadas de reels elegidas a propósito, con cuatro palabras de texto, no el cuadro uno.",
+      "falla_comun": "Nueve placas de promo con mucho texto chico, o caras a mitad de palabra."
+    },
+    {
+      "id": "foto_perfil",
+      "nombre": "Foto de perfil",
+      "puntos": 4,
+      "completo": "El logo legible a 40 píxeles: la palabra 'Cristal' tiene que leerse en el círculo chiquito de un comentario. Fondo que no compita.",
+      "falla_comun": "Logo con el nombre entero en letra chica, o una foto del local que en miniatura no se ve."
+    },
+    {
+      "id": "actividad",
+      "nombre": "Actividad reciente",
+      "puntos": 10,
+      "completo": "Publicó en los últimos siete días y contestó los comentarios de lo último que subió. Un perfil que publicó por última vez en marzo se lee como cerrado.",
+      "falla_comun": "Cinco semanas sin publicar, o una pared de '¿precio?' sin responder."
+    },
+    {
+      "id": "historias",
+      "nombre": "Historias",
+      "puntos": 6,
+      "completo": "Hay una historia arriba ahora, o casi todos los días. Es la diferencia entre un perfil y un comercio que está abierto.",
+      "falla_comun": "Nunca hay círculo."
+    },
+    {
+      "id": "respuesta",
+      "nombre": "Precios y respuesta",
+      "puntos": 6,
+      "completo": "Los precios de lo que se promociona están a la vista y los mensajes se responden en el día (el tiempo de respuesta se ve en el perfil). Nunca 'precio por privado'.",
+      "falla_comun": "'Consultá precio por DM', o mensajes del perfil sin responder hace días."
+    }
+  ]
+}

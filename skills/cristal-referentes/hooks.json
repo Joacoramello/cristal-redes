@@ -1,0 +1,473 @@
+{
+ "version": "1.0-cristal",
+ "nota": "30 fórmulas de ganchos para reels de Química Cristal, en rioplatense. Un reel tiene dos hooks que se disparan juntos y no son la misma frase: lo primero que decís y lo primero que aparece en pantalla. El hablado tiene unos dos segundos; el de pantalla, uno, porque se lee antes de escucharse. Cada fórmula trae plantilla, ejemplo del rubro, versión en pantalla, para qué sirve, cómo se arruina y una regex `match` para reconocerla en reels ajenos. Se recorren en `orden_clasificacion`, de la más específica a la más general. Los {{dobles corchetes}} de los ejemplos son datos que NUNCA se inventan: salen de Odoo, del mostrador o de Joaco.",
+ "reglas": [
+  "Escribí la línea hablada y la de pantalla por separado. La de pantalla es más corta y más bruta: seis palabras o menos.",
+  "Sin introducción. El video arranca en la frase a la que normalmente llegarías en el segundo seis.",
+  "Decí el número. 'Un montón' no es un número, 'rinde muchísimo' tampoco.",
+  "El primer cuadro también es hook. Una cabeza quieta hablando en el segundo cero, sin movimiento y sin texto, son tres hooks tirados.",
+  "Si el hook le sirve a cualquier otra química o al súper, no es tu hook. Metele lo que solo Cristal puede decir: fabricación propia, 20 años, Río Cuarto, el mostrador.",
+  "Un hook promete algo. Cumplilo antes de la mitad del video o la retención que compraste se devuelve.",
+  "Nada de recetas de mezcla de químicos. Si el tema es seguridad, se dice qué NO hacer, nunca cómo."
+ ],
+ "orden_clasificacion": [
+  30,
+  17,
+  27,
+  16,
+  1,
+  23,
+  5,
+  4,
+  3,
+  8,
+  29,
+  13,
+  28,
+  20,
+  7,
+  12,
+  9,
+  22,
+  6,
+  15,
+  25,
+  24,
+  19,
+  14,
+  10,
+  11,
+  2,
+  26,
+  21,
+  18
+ ],
+ "aviso_ejemplos": "Los ejemplos muestran la FORMA. Cualquier número, dosis, dilución, cita o resultado de un ejemplo que no esté entre {{ }} es ilustrativo: en un guion real sale de Odoo, de la etiqueta o de Joaco.",
+ "hooks": [
+  {
+   "id": 1,
+   "nombre": "Confesión de costo",
+   "plantilla": "{Monto concreto} es lo que {nos/te} costó {un error puntual}.",
+   "ejemplo": "Tirar la lavandina vieja nos costó {{monto real}} el año pasado. Esto es lo que aprendimos.",
+   "en_pantalla": "{{MONTO}} TIRADOS",
+   "sirve_para": "Confianza rápida. La gente termina los videos donde el que queda mal sos vos.",
+   "trampa": "Un costo inventado o vago. 'Me costó un montón' no es un número y se nota.",
+   "segmentos": [
+    "todos"
+   ],
+   "match": "\\b(?:me|nos|te|les) (?:costó|cuesta|está costando)\\b|\\bperd(?:í|imos|iste|és|emos)\\b[^.!?]{0,25}\\$\\s?\\d|\\$\\s?\\d[\\d.]*\\s+(?:es|fue) lo que\\b|\\btir(?:é|amos|ás|aste|aron)\\b[^.!?]{0,25}\\$\\s?\\d"
+  },
+  {
+   "id": 2,
+   "nombre": "Orden negativa",
+   "plantilla": "Dejá de {hábito común}. Hacé {alternativa}.",
+   "ejemplo": "Dejá de clorar la pileta al mediodía. Hacelo cuando baja el sol.",
+   "en_pantalla": "DEJÁ DE CLORAR AL MEDIODÍA",
+   "sirve_para": "Guardados y discusión. El imperativo frena el dedo mejor que una afirmación.",
+   "trampa": "Prohibir algo que nadie hace. El hábito tiene que ser uno que el que mira reconozca en sí mismo.",
+   "segmentos": [
+    "consumidor final",
+    "gastronómicos"
+   ],
+   "match": "^\\s*[¡¿]?\\s*(?:dej[aá] de|par[aá] de|basta de|no (?:compres|uses|mezcles|eches|tires|laves|limpies|hagas|pongas|guardes|diluyas)|nunca (?:mezcles|uses|eches|compres|limpies|guardes))\\b"
+  },
+  {
+   "id": 3,
+   "nombre": "Nadie te dice",
+   "plantilla": "Nadie te dice que {verdad incómoda sobre lo que quiere}.",
+   "ejemplo": "Nadie te dice que la lavandina pierde fuerza si la guardás al sol.",
+   "en_pantalla": "LA LAVANDINA SE VENCE",
+   "sirve_para": "Audiencia nueva. Te posiciona como el que dice lo que nadie dice.",
+   "trampa": "Una 'verdad' que ya dice todo el mundo. Si en los comentarios te dan la razón antes de terminar, no era secreto.",
+   "segmentos": [
+    "consumidor final",
+    "todos"
+   ],
+   "match": "\\b(?:nadie|ninguno|ninguna etiqueta)\\s+(?:te\\s+|les\\s+|lo\\s+)?(?:dice|cuenta|explica|avisa|dijo|contó)\\b|\\blo que nadie (?:te |les )?(?:dice|cuenta)\\b|\\bno te (?:lo )?(?:dicen|cuentan|explican)\\b"
+  },
+  {
+   "id": 4,
+   "nombre": "El reemplazo",
+   "plantilla": "{Esto} reemplaza a {lo caro} por {precio}.",
+   "ejemplo": "Un bidón de desengrasante concentrado reemplaza {{N}} sprays del súper.",
+   "en_pantalla": "1 BIDÓN = {{N}} SPRAYS",
+   "sirve_para": "Producto contra alternativa cara. La diferencia de precio hace el trabajo.",
+   "trampa": "Comparar contra algo que tu cliente no compra. La alternativa tiene que ser la que hoy tiene en el changuito.",
+   "segmentos": [
+    "consumidor final",
+    "mayorista",
+    "gastronómicos"
+   ],
+   "match": "\\breemplaz(?:a|ó|ás|amos|an)\\b|\\ben (?:vez|lugar) de\\b[^.!?]{0,30}\\$"
+  },
+  {
+   "id": 5,
+   "nombre": "Colapso de tiempo",
+   "plantilla": "Esto antes {me/nos} llevaba {mucho}. Ahora {poco}.",
+   "ejemplo": "Desengrasar la plancha nos llevaba {{minutos antes}} minutos. Ahora, {{minutos ahora}}.",
+   "en_pantalla": "{{ANTES}} MIN → {{AHORA}} MIN",
+   "sirve_para": "Procesos donde la ganancia es tiempo. Se lee al instante en pantalla.",
+   "trampa": "Un ahorro que no se puede mostrar. Si no se ve la plancha limpia en cámara, no hay hook.",
+   "segmentos": [
+    "gastronómicos",
+    "institucional",
+    "consumidor final"
+   ],
+   "match": "\\b(?:me|nos|te) (?:llevaba|llevó|tardaba)\\b|\\btardábamos\\b|\\bantes\\b[^.!?]{0,40}\\b(?:llevaba|tardaba)\\b|\\bahora,?\\s+(?:en\\s+)?(?:\\d+|dos|tres|cinco|diez|un|una)\\s+(?:minutos?|segundos?)\\b|\\bde\\s+\\d+\\s*(?:horas?|minutos?|min|días?)\\s+a\\s+\\d+|\\bahora (?:tardo|tardamos|me lleva|nos lleva)\\b"
+  },
+  {
+   "id": 6,
+   "nombre": "La prueba con números",
+   "plantilla": "Probamos {X} durante {N días}. Estos son los resultados reales.",
+   "ejemplo": "Dejamos dos baldes con lavandina {{N}} días, uno al sol y otro a la sombra. Mirá cuánto cloro le quedaba a cada uno.",
+   "en_pantalla": "{{N}} DÍAS AL SOL",
+   "sirve_para": "Experimentos. Va con la medición real en cámara (tira reactiva, balanza, cronómetro), que es todo el valor.",
+   "trampa": "No medir de verdad. Si el resultado no se ve, es una opinión con música.",
+   "segmentos": [
+    "consumidor final",
+    "todos"
+   ],
+   "match": "\\bprob(?:é|amos|aste)\\b[^.!?]{0,40}\\b(?:días?|semanas?|meses?)\\b|\\b(?:durante|por)\\s+\\d+\\s+(?:días?|semanas?|meses?)\\b|\\blos (?:números|resultados) reales\\b|^\\s*dejamos\\b"
+  },
+  {
+   "id": 7,
+   "nombre": "Lo estás haciendo mal",
+   "plantilla": "Estás {haciendo X} mal, y no es tu culpa. {El arreglo}.",
+   "ejemplo": "Estás diluyendo mal el limpiador, y no es tu culpa: la etiqueta del súper no te dice cuánto.",
+   "en_pantalla": "LO ESTÁS DILUYENDO MAL",
+   "sirve_para": "Enseñar. El 'no es tu culpa' evita que suene a reto, que es lo que mata este formato.",
+   "trampa": "Quedarse en el reto sin dar el arreglo en los primeros 10 segundos.",
+   "segmentos": [
+    "consumidor final",
+    "gastronómicos",
+    "institucional"
+   ],
+   "match": "\\b(?:lo )?est[aá]s (?:haciendo|usando|limpiando|lavando|diluyendo|guardando|comprando|clorando)\\b[^.!?]{0,30}\\bmal\\b|\\bno es tu culpa\\b|\\blo hac[eé]s mal\\b"
+  },
+  {
+   "id": 8,
+   "nombre": "Desde adentro",
+   "plantilla": "{N} años {adentro del rubro}. Esto no lo dice ninguna etiqueta.",
+   "ejemplo": "Hace más de 20 años que fabricamos lavandina en Río Cuarto. Esto no te lo cuenta ninguna etiqueta.",
+   "en_pantalla": "20 AÑOS FABRICANDO",
+   "sirve_para": "Autoridad sin placa de presentación. Funciona solo porque los años son reales.",
+   "trampa": "Usarlo para decir algo obvio. Si el secreto entra en la etiqueta, no es de adentro.",
+   "segmentos": [
+    "todos",
+    "mayorista"
+   ],
+   "match": "\\b(?:hace|llevamos|tengo|tenemos)\\s+(?:más de\\s+)?(?:\\d+|veinte|diez|quince)\\s+años\\b|\\b(?:\\d+|veinte)\\s+años (?:fabricando|vendiendo|haciendo|en esto|en el rubro)\\b|\\bdesde adentro\\b"
+  },
+  {
+   "id": 9,
+   "nombre": "Guardate esto",
+   "plantilla": "Guardate {esta tabla / receta / lista}. Es la que usamos nosotros.",
+   "ejemplo": "Guardate esta tabla de cloro según los litros de tu pileta. Es la misma que usamos en el mostrador.",
+   "en_pantalla": "TABLA DE CLORO",
+   "sirve_para": "Guardados y envíos, las dos señales que más mueven el alcance.",
+   "trampa": "Prometer una tabla y mostrarla dos segundos. Tiene que quedar legible en pausa.",
+   "segmentos": [
+    "consumidor final",
+    "gastronómicos",
+    "institucional"
+   ],
+   "match": "\\b(?:robate|copiate|guardate|anotate|llevate|sacale captura)\\b|\\bguard[aá] (?:este|esta|esto)\\b"
+  },
+  {
+   "id": 10,
+   "nombre": "Si te pasa esto, mirá",
+   "plantilla": "Si {situación concreta}, esto lo arregla en {tiempo}.",
+   "ejemplo": "Si tu pileta amaneció verde, no la vacíes. Mirá esto.",
+   "en_pantalla": "¿PILETA VERDE?",
+   "sirve_para": "Filtrar duro. Se quedan menos, pero los que se quedan son los que compran.",
+   "trampa": "Una situación tan amplia que no filtra a nadie ('si querés limpiar mejor').",
+   "segmentos": [
+    "consumidor final",
+    "gastronómicos",
+    "institucional"
+   ],
+   "match": "^\\s*[¡¿]?\\s*si (?:tu|tus|tenés|tenes|te|usás|usas|ves|la|el|en tu|sos|vendés|atendés)\\b|\\bsi te pasa\\b|\\bte pasa que\\b"
+  },
+  {
+   "id": 11,
+   "nombre": "Lista con favorito",
+   "plantilla": "{N} {cosas} que {resultado}. La {k} casi nadie la usa.",
+   "ejemplo": "Tres productos que todo bar tiene que tener. El tercero casi nadie lo tiene.",
+   "en_pantalla": "3 QUE TODO BAR NECESITA",
+   "sirve_para": "Retención en el medio: nombrar un favorito da motivo para quedarse.",
+   "trampa": "Más de cinco ítems. Para la lista larga está el carrusel.",
+   "segmentos": [
+    "gastronómicos",
+    "institucional",
+    "mayorista"
+   ],
+   "match": "^\\s*(?:\\d+|dos|tres|cuatro|cinco|seis|siete)\\s+(?:productos|cosas|errores|trucos|claves|pasos|formas|maneras|razones|motivos|señales)\\b|\\b(?:la|el) (?:última|último|tercera|tercero|cuarta|cuarto)\\b[^.!?]{0,30}\\b(?:nadie|ninguno|mejor|casi)\\b"
+  },
+  {
+   "id": 12,
+   "nombre": "La objeción",
+   "plantilla": "\"{Objeción tal cual la dicen}.\" Bien. Hagamos la prueba.",
+   "ejemplo": "\"Es lo mismo que el del súper.\" Bueno, hagamos la prueba.",
+   "en_pantalla": "¿ES LO MISMO?",
+   "sirve_para": "Venderle al que ya dijo que no una vez. Lo mejor para granel contra marca.",
+   "trampa": "Inventar la objeción. Tiene que ser la que escuchás en el mostrador o en WhatsApp, textual.",
+   "segmentos": [
+    "consumidor final",
+    "mayorista"
+   ],
+   "match": "^\\s*[\\\"“'«][^\\\"”'»]{3,90}[\\\"”'»]\\s*[.,]?\\s*(?:bien|bueno|ok|dale|perfecto|puede ser|ten[eé]s razón|mmm|ajá)\\b|\\bes lo mismo que (?:el|la|lo) del súper\\b|\\bes lo mismo que\\b"
+  },
+  {
+   "id": 13,
+   "nombre": "Antes y después",
+   "plantilla": "{Mostrás cómo estaba}. {Mostrás cómo quedó}. {Una frase sobre qué lo hizo}.",
+   "ejemplo": "Así estaba la campana del bar. Así quedó con un solo producto.",
+   "en_pantalla": "ANTES / DESPUÉS",
+   "sirve_para": "Todo lo visual. En limpieza es el formato rey: el corte entre los dos planos es el hook, las palabras son secundarias.",
+   "trampa": "Un 'antes' que no está tan sucio, o un 'después' con otra luz. Mismo encuadre, misma luz, o no vale.",
+   "segmentos": [
+    "todos"
+   ],
+   "match": "\\bantes y después\\b|\\bas[ií] (?:estaba|quedó|quedo|era|lo dejamos|la dejamos)\\b|\\bmir[aá] c[oó]mo (?:queda|quedó)\\b"
+  },
+  {
+   "id": 14,
+   "nombre": "Llamado al grupo",
+   "plantilla": "{Grupo concreto}: esto es para ustedes.",
+   "ejemplo": "Si tenés un almacén en un pueblo cerca de Río Cuarto, esto es para vos.",
+   "en_pantalla": "ALMACENES DE LA ZONA",
+   "sirve_para": "Recortar a la audiencia que compra. Sube el envío porque la gente se lo manda al que corresponde.",
+   "trampa": "Un grupo tan grande que no se siente nombrado ('emprendedores').",
+   "segmentos": [
+    "mayorista",
+    "ruta camión",
+    "gastronómicos",
+    "institucional"
+   ],
+   "match": "^\\s*(?:dueños|dueñas|encargados|encargadas|administradores|administradoras|consorcios|revendedores|emprendedores|almacenes|kiosqueros|gastronómicos|bares|hoteles|clubes|cocineros|quienes)\\b|\\besto es para (?:vos|ustedes)\\b"
+  },
+  {
+   "id": 15,
+   "nombre": "Registro de fracasos",
+   "plantilla": "Los primeros {N} {intentos} no funcionaron. Esto cambió en el {N+1}.",
+   "ejemplo": "Las primeras {{N}} fórmulas de este desengrasante no sirvieron. La que vendemos es la {{N+1}}.",
+   "en_pantalla": "{{N}} FÓRMULAS FALLADAS",
+   "sirve_para": "Comentarios y confianza en el producto propio.",
+   "trampa": "Fracasos de cartón. Si no hubo costo real, no hay historia.",
+   "segmentos": [
+    "todos"
+   ],
+   "match": "\\b(?:los|las) primer(?:os|as)\\s+(?:\\d+|dos|tres|cuatro|cinco|diez)\\b[^.!?]{0,40}\\b(?:no|nada|fall)|\\bno (?:funcion(?:ó|aron)|sirvi(?:ó|eron))\\b"
+  },
+  {
+   "id": 16,
+   "nombre": "La pregunta textual",
+   "plantilla": "\"{Pregunta exactamente como la hacen}\" Nos la hacen todos los días.",
+   "ejemplo": "\"¿Cuánto cloro le pongo a una pileta de 20 mil litros?\" Nos lo preguntan todos los días.",
+   "en_pantalla": "¿CUÁNTO CLORO LE PONGO?",
+   "sirve_para": "Búsqueda. Una pregunta escrita como la escribe la gente es lo que matchea el buscador de Instagram.",
+   "trampa": "Pulir la pregunta. Va textual, con el error de tipeo incluido si así llegó por WhatsApp.",
+   "segmentos": [
+    "consumidor final",
+    "todos"
+   ],
+   "match": "^\\s*[\\\"“'«]?\\s*¿[^?]{5,90}\\?\\s*[\\\"”'»]?[^.!?]{0,10}\\b(?:me|nos)\\s+(?:lo |la )?preguntan\\b|\\b(?:me|nos) (?:lo |la )?preguntan (?:todos|todas|siempre|cada)\\b"
+  },
+  {
+   "id": 17,
+   "nombre": "Cara a cara",
+   "plantilla": "{A} contra {B}. Probamos los dos y no hubo comparación.",
+   "ejemplo": "Lavandina de marca contra la nuestra a granel. Mismo uso, mirá cuánto sale el litro de cada una.",
+   "en_pantalla": "MARCA VS GRANEL",
+   "sirve_para": "Comentarios. La gente llega con opinión tomada, que es justamente el punto.",
+   "trampa": "Comparar sin medir. Precio por litro, rendimiento o resultado en cámara; si no, es publicidad.",
+   "segmentos": [
+    "consumidor final",
+    "mayorista"
+   ],
+   "match": "\\b\\w+\\s+(?:vs\\.?|versus)\\s+\\w+|\\b\\w+\\s+contra\\s+(?:la|el|los|las)\\s+\\w+|\\b(?:cuál|cual) (?:rinde|limpia|conviene|dura) más\\b"
+  },
+  {
+   "id": 18,
+   "nombre": "Demo en frío",
+   "plantilla": "{Arrancás en plena acción, ya haciendo la cosa}. Mirá lo que hace esto.",
+   "ejemplo": "Mirá lo que pasa con esta grasa en diez segundos.",
+   "en_pantalla": "10 SEGUNDOS",
+   "sirve_para": "Cualquier cosa con resultado visible. Sin preparación: la mano ya está trabajando en el primer cuadro.",
+   "trampa": "Tardar en llegar a la acción. Si en el segundo 2 no pasó nada, no es demo en frío.",
+   "segmentos": [
+    "todos"
+   ],
+   "match": "^\\s*[¡]?\\s*mir[aá] (?:lo que|qué|que|c[oó]mo|esto)\\b|^\\s*mir[aá]\\b"
+  },
+  {
+   "id": 19,
+   "nombre": "El plazo",
+   "plantilla": "{Algo} cambia el {fecha}. Hacé {acción} antes.",
+   "ejemplo": "La temporada de pileta arranca en noviembre. Si no la preparás en octubre, la abrís verde.",
+   "en_pantalla": "ANTES DE NOVIEMBRE",
+   "sirve_para": "Urgencia real: temporada de pileta, cierre de preventa del camión, fin de promo.",
+   "trampa": "Urgencia falsa. Si la fecha no existe, el cliente lo aprende una vez y no te cree más.",
+   "segmentos": [
+    "consumidor final",
+    "ruta camión",
+    "mayorista"
+   ],
+   "match": "\\bantes (?:de|del) (?:que|el|la|fin|noviembre|diciembre|enero|verano|temporada|miércoles|jueves|viernes|lunes)\\b|\\bhasta el (?:\\d+|lunes|martes|miércoles|jueves|viernes|sábado|domingo)\\b|\\b(?:arranca|empieza|termina|vence|cierra)\\b[^.!?]{0,25}\\b(?:temporada|preventa|promo|el \\d+)\\b|\\b(?:temporada|preventa|promo)\\b[^.!?]{0,30}\\b(?:arranca|empieza|termina|vence|cierra)\\b"
+  },
+  {
+   "id": 20,
+   "nombre": "Permiso",
+   "plantilla": "No necesitás {lo que todos dicen que necesitás}.",
+   "ejemplo": "No necesitás diez productos para limpiar la casa. Con tres alcanza.",
+   "en_pantalla": "CON 3 ALCANZA",
+   "sirve_para": "Alivio. Muchos guardados, porque saca una tarea en vez de sumar una.",
+   "trampa": "Dar permiso para algo que después no sostenés vendiendo diez productos.",
+   "segmentos": [
+    "consumidor final"
+   ],
+   "match": "\\bno (?:necesit[aá]s|hace falta|ten[eé]s que|precis[aá]s|hay que)\\b"
+  },
+  {
+   "id": 21,
+   "nombre": "A mitad de frase",
+   "plantilla": "...y ahí fue cuando {el giro}.",
+   "ejemplo": "...y ahí el encargado nos dijo {{lo que dijo, textual}}.",
+   "en_pantalla": "Y AHÍ...",
+   "sirve_para": "Historias. Arrancar en el medio da la sensación de llegar tarde, que es un motivo para quedarse.",
+   "trampa": "Que la historia de atrás no exista. Tiene que haber pasado.",
+   "segmentos": [
+    "todos"
+   ],
+   "match": "^\\s*(?:\\.\\.\\.|…)|^\\s*y (?:ahí|entonces|de repente|cuando)\\b"
+  },
+  {
+   "id": 22,
+   "nombre": "Refrán dado vuelta",
+   "plantilla": "{Dicho conocido, al revés}.",
+   "ejemplo": "Lo barato no sale caro. Lo mal diluido, sí.",
+   "en_pantalla": "LO BARATO NO SALE CARO",
+   "sirve_para": "Comentarios. El que mira tiene que frenar a ver si escuchó bien.",
+   "trampa": "Un juego de palabras sin sustancia atrás. El giro tiene que llevar a un dato.",
+   "segmentos": [
+    "consumidor final",
+    "mayorista"
+   ],
+   "match": "\\b(?:lo barato (?:no )?sale caro|más vale|no por mucho madrugar|el que avisa|al que madruga)\\b"
+  },
+  {
+   "id": 23,
+   "nombre": "La estadística",
+   "plantilla": "El {N}% de {grupo} {dato sorprendente}.",
+   "ejemplo": "{{N}} de cada 10 piletas verdes que nos traen tienen mal el pH, no el cloro.",
+   "en_pantalla": "{{N}} DE CADA 10",
+   "sirve_para": "Envíos. Un número que se puede repetir en la sobremesa se manda.",
+   "trampa": "Una cifra inventada o de fuente desconocida. Solo números propios (del mostrador, de Odoo) o con fuente.",
+   "segmentos": [
+    "todos"
+   ],
+   "match": "^\\s*(?:el|un|una)?\\s*\\d+[.,]?\\d*\\s*%|\\b\\d+\\s+de cada\\s+\\d+\\b|\\b(?:nueve|ocho|siete|seis|cinco|cuatro|tres|dos) de cada (?:diez|10)\\b"
+  },
+  {
+   "id": 24,
+   "nombre": "La revelación",
+   "plantilla": "Este es el nuevo {X}.",
+   "ejemplo": "Este es el nuevo detergente concentrado. {{dosis de la etiqueta}}, un balde.",
+   "en_pantalla": "LLEGÓ",
+   "sirve_para": "Lanzamientos y productos nuevos. El objeto es el hook y las palabras son el subtítulo.",
+   "trampa": "Llamar 'nuevo' a lo de siempre.",
+   "segmentos": [
+    "todos"
+   ],
+   "match": "^\\s*(?:este|esta|estos|estas) (?:es|son) (?:el|la|los|las) nuev[oa]s?\\b|^\\s*(?:ya )?lleg[oó]\\b"
+  },
+  {
+   "id": 25,
+   "nombre": "Resultado de otro",
+   "plantilla": "Un {cliente} {logró resultado} en {tiempo}.",
+   "ejemplo": "Un almacén de {{localidad}} vendió {{N}} bidones la primera semana. Esto hizo.",
+   "en_pantalla": "{{N}} BIDONES EN 1 SEMANA",
+   "sirve_para": "Prueba social cuando el número no es tuyo. Solo con dato real y permiso del cliente para nombrarlo.",
+   "trampa": "Inventar el cliente. Es la trampa más tentadora del rubro y la que más rápido te quema.",
+   "segmentos": [
+    "mayorista",
+    "ruta camión",
+    "gastronómicos",
+    "institucional"
+   ],
+   "match": "^\\s*(?:un|una) (?:cliente|clienta|bar|almacén|restaurante|hotel|consorcio|club|colegio|vecino|vecina|revendedor|revendedora)\\b[^.!?]{0,60}\\b(?:logró|vendió|ahorró|bajó|pasó|dejó|consiguió|nos (?:dijo|pidió|escribió))\\b"
+  },
+  {
+   "id": 26,
+   "nombre": "El superlativo",
+   "plantilla": "{La forma más rápida / el único} {X} es {la respuesta}.",
+   "ejemplo": "La forma más rápida de sacar el sarro de la mampara es la que menos gente usa.",
+   "en_pantalla": "LA MÁS RÁPIDA",
+   "sirve_para": "Videos de una sola afirmación. Es la forma más común en la calle y la más fácil de hacer mal.",
+   "trampa": "El superlativo sin prueba en cámara. 'El mejor' sin demostrar es un aviso de diario.",
+   "segmentos": [
+    "consumidor final"
+   ],
+   "match": "\\b(?:el|la|lo) (?:más|mas) (?:rápid[oa]|fácil|barat[oa]|rendidor[a]?|efectiv[oa]|important[e])\\b|\\b(?:el|la) (?:únic[oa]|mejor|peor) (?:forma|manera|producto|truco|error)\\b|\\b(?:forma|manera)s? (?:más|mas) (?:rápid|fácil|barat|segur)\\w*"
+  },
+  {
+   "id": 27,
+   "nombre": "La cuenta",
+   "plantilla": "{Producto} a {precio}. Rinde {N} {usos}. Hacé la cuenta.",
+   "ejemplo": "Este concentrado va {{dilución de la etiqueta}}. El bidón de 5 litros te hace {{N}} litros de limpiador. Hacé la cuenta.",
+   "en_pantalla": "1 BIDÓN = {{N}} LITROS",
+   "sirve_para": "Granel y concentrados contra marca. El precio por litro o por uso es el argumento más fuerte que tiene una química, y el mostrador lo explica todos los días.",
+   "trampa": "Una dilución que no es la de la etiqueta del producto. Sale de la ficha técnica, no de la memoria.",
+   "segmentos": [
+    "consumidor final",
+    "mayorista",
+    "gastronómicos",
+    "institucional"
+   ],
+   "match": "\\bhac[eé] la cuenta\\b|\\brind(?:e|en)\\b|\\brendimiento\\b|\\bpor litro\\b|\\bel litro\\b|\\buno en (?:diez|veinte|cinco|\\d+)\\b|\\b\\d+\\s*(?:en|a)\\s*\\d+\\b[^.!?]{0,12}\\b(?:litros?|agua)\\b"
+  },
+  {
+   "id": 28,
+   "nombre": "El mito",
+   "plantilla": "{Creencia común}. Falso{, y además es peligroso}.",
+   "ejemplo": "Más lavandina no limpia más. Lo único que hace es comerte la ropa y el piso.",
+   "en_pantalla": "MÁS NO ES MEJOR",
+   "sirve_para": "Alcance y autoridad. En químicos hay mitos de sobra y la química que los desarma queda como la que sabe.",
+   "trampa": "Explicar mezclas peligrosas con detalle. Se dice 'no mezcles', nunca cómo ni en qué proporción.",
+   "segmentos": [
+    "consumidor final",
+    "institucional"
+   ],
+   "match": "\\b(?:es un mito|mito|falso|mentira|no es verdad|no es cierto)\\b|\\bmás (?:lavandina|cloro|detergente|producto) no\\b"
+  },
+  {
+   "id": 29,
+   "nombre": "Detrás de escena",
+   "plantilla": "Así se {fabrica / prepara} {el producto que usás}.",
+   "ejemplo": "Así fabricamos el detergente que se lleva la gente del local. De la base al bidón.",
+   "en_pantalla": "ASÍ LO FABRICAMOS",
+   "sirve_para": "Diferenciarse de un revendedor: fabricación propia en Río Cuarto es algo que la competencia del súper no puede mostrar.",
+   "trampa": "Mostrar procesos o fórmulas que son el negocio. Se ve el proceso, no la receta.",
+   "segmentos": [
+    "todos",
+    "mayorista"
+   ],
+   "match": "^\\s*as[ií] (?:se )?(?:fabrica|fabricamos|hace|hacemos|prepara|preparamos|envasa|envasamos|llenamos|arma|armamos)\\b|\\bdetrás de (?:escena|cámara)\\b|\\ben la fábrica\\b"
+  },
+  {
+   "id": 30,
+   "nombre": "Precio en pantalla",
+   "plantilla": "{Producto o combo} a {precio}. Te muestro qué trae.",
+   "ejemplo": "Combo de cloro de 6 kilos a {{precio de Odoo}}. Te muestro todo lo que trae.",
+   "en_pantalla": "{{PRECIO}}",
+   "sirve_para": "Ofertas y promos. Es el formato que ganó en la pauta (vos en el local, a cámara, con el cartel de precio). En orgánico sirve para validar el próximo anuncio.",
+   "trampa": "Precio viejo o sin chequear stock. El precio sale de Odoo el día que se graba y el combo tiene que estar en el depósito.",
+   "segmentos": [
+    "consumidor final",
+    "mayorista",
+    "ruta camión"
+   ],
+   "match": "\\ba\\s+\\$\\s?\\d|\\$\\s?\\d[\\d.]*[^.!?]{0,25}\\b(?:trae|incluye|lleva|viene)\\b|\\b(?:promo|oferta|combo)\\b[^.!?]{0,30}\\$\\s?\\d"
+  }
+ ]
+}
