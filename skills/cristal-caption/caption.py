@@ -47,7 +47,7 @@ TUTEO_RE = re.compile(r"\b(?:tú|puedes|tienes|quieres|sabes|eres|necesitas|escr
 
 ASKS = [
     (re.compile(r"(?i)\bcoment(?:á|a|en)\s+(?:la palabra\s+)?[\"“']?[A-ZÁÉÍÓÚÑ0-9]{3,}\b"), "comentar una palabra clave"),
-    (re.compile(r"(?i)\b(?:escribinos|escribime|mandanos|mandame|hablanos)\b|\bpedilo\b|\bhacé tu pedido\b"), "escribir / pedir"),
+    (re.compile(r"(?i)\b(?:escribinos|escribime|mandanos|mandame|hablanos|pasanos|pasame|consultanos)\b|\bpedilo\b|\bhacé tu pedido\b"), "escribir / pedir"),
     (re.compile(r"(?i)\bguard(?:á|alo|ala|ate)\b"), "guardar"),
     (re.compile(r"(?i)\bcompart(?:í|ilo|ila)\b|\bmandáselo\b|\bpasáselo\b"), "compartir / mandárselo a alguien"),
     (re.compile(r"(?i)\bsegu(?:inos|ime)\b"), "seguir"),
